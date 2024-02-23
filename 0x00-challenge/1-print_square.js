@@ -15,7 +15,7 @@ if (process.argv.length <= 2) {
 }
 
 const hexSize = process.argv[2];
-const size = parseInt(hexSize, 16)
+const size = parseInt(hexSize, 16);
 
 for (let i = 0 ; i < size ; i ++) {
     for (let j = 0 ; j < size ; j ++) {
