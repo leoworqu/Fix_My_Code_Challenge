@@ -14,7 +14,14 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-size = BigInt(parseInt(process.argv[2], 16))
+const input = process.argv[2];
+
+let size;
+if (/^[0-9A-Fa-f]+$/.test(input)) {
+    size = parseInt(input, 16);
+} else (!isNaN(input)) {
+    size = parseInt(input);
+}
 
 for (let i = 0 ; i < size ; i ++) {
     for (let j = 0 ; j < size ; j ++) {
