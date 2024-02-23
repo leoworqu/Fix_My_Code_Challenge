@@ -18,7 +18,7 @@ const input = process.argv[2];
 
 let size;
 if (/^[0-9A-Fa-f]+$/.test(input)) {
-    size = parseInt(input, 16);
+    size = BigInt(parseInt(input, 16));
 } else {
     size = parseInt(input);
 }
