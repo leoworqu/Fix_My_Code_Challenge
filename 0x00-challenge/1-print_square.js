@@ -14,14 +14,7 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-const isHex = (str) => /^[0-9A-Fa-f]+$/.test(str);
-const Rsize = process.argv[2];
-
-if (isHex(Rsize)){
-    size = parseInt(Rsize, 16);
-} else {
-    size = Rsize;
-}
+size = parseInt(process.argv[2], 16)
 
 for (let i = 0 ; i < size ; i ++) {
     for (let j = 0 ; j < size ; j ++) {
