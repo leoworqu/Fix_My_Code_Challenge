@@ -14,10 +14,17 @@ if (process.argv.length <= 2) {
     process.exit(1)
 }
 
-size = parseInt(process.argv[2], 16)
+input = process.argv[2];
 
-for (let i = 0 ; i < size ; i ++) {
-    for (let j = 0 ; j < size ; j ++) {
+let size;
+if (/^[0-9A-Fa-f]+$/.test(input)) {
+    size = parseInt(input, 16);
+} else {
+    size = parseInt(input);
+}
+
+for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
         process.stdout.write("#");
     }
     process.stdout.write("\n");
